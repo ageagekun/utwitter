@@ -1,0 +1,21 @@
+<h1>Listing utwits</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @utwits.each do |utwit| %>
+  <tr>
+    <td><%= link_to 'Show', utwit %></td>
+    <td><%= link_to 'Edit', edit_utwit_path(utwit) %></td>
+    <td><%= link_to 'Destroy', utwit, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Utwit', new_utwit_path %>
